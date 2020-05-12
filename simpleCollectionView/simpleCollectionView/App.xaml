@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="simpleCollectionView.App">
+    <Application.Resources>
+        <ResourceDictionary>
+
+
+            <OnPlatform x:TypeArguments="x:String" 
+                x:Key="FontAwesomeBrands">
+                <On Platform="Android" 
+          Value="FontAwsomeBrands.otf#Regular" />
+                <On Platform="iOS" 
+          Value="FontAwsomeBrands-Regular" />
+                <On Platform="UWP" 
+          Value="/Assets/FontAwsomeBrands.otf#Font Awesome 5 Brands" />
+            </OnPlatform>
+
+            <OnPlatform x:TypeArguments="x:String" 
+                x:Key="FontAwesomeSolid">
+                <On Platform="Android" 
+          Value="FontAwsomeSolid.otf#Regular" />
+                <On Platform="iOS" 
+          Value="FontAwsomeSolid-Solid" />
+                <On Platform="UWP" 
+          Value="/Assets/FontAwsomeSolid.otf#Font Awesome 5 Free" />
+            </OnPlatform>
+
+            <OnPlatform x:TypeArguments="x:String" 
+                x:Key="FontAwesomeRegular">
+                <On Platform="Android" 
+          Value="FontAwsomeRegular.otf#Regular" />
+                <On Platform="iOS" 
+          Value="FontAwsomeRegular-Regular" />
+                <On Platform="UWP" 
+          Value="FontAwsomeRegular.otf#Font Awesome 5 Free" />
+            </OnPlatform>
+
+
+            <Style x:Key="NameLabel" TargetType="Label">
+                <Setter Property="FontSize" Value="Micro" />
+                <Setter Property="FontAttributes" Value="Bold" />
+                <Setter Property="TextColor" Value="Black" />
+            </Style>
+
+            <Color x:Key="ErrorColor">#ff5252</Color>
+
+            <OnPlatform x:Key="LittleSize"
+                        x:TypeArguments="x:Double">
+                <On Platform="iOS" Value="11" />
+                <On Platform="Android, UWP, WinRT, WinPhone" Value="12" />
+            </OnPlatform>
+
+            <Style x:Key="ValidationErrorLabelStyle"
+                   TargetType="{x:Type Label}">
+                <Setter Property="TextColor"
+                           Value="{StaticResource ErrorColor}" />
+                <Setter Property="FontSize"
+                           Value="{StaticResource LittleSize}" />
+            </Style>
+
+            <OnPlatform x:Key="LargeFontSize"
+                        x:TypeArguments="x:Double">
+                <On Platform="iOS" Value="20" />
+                <On Platform="Android, UWP, WinRT, WinPhone" Value="18" />
+            </OnPlatform>
+
+            <OnPlatform x:Key="MediumFontSize"
+                        x:TypeArguments="x:Double">
+                <On Platform="iOS" Value="18" />
+                <On Platform="Android, UWP, WinRT, WinPhone" Value="16" />
+            </OnPlatform>
+
+            <OnPlatform x:Key="SmallFontSize"
+                        x:TypeArguments="x:Double">
+                <On Platform="iOS" Value="14" />
+                <On Platform="Android, UWP, WinRT, WinPhone" Value="11" />
+            </OnPlatform>
+
+            <OnPlatform x:Key="XSmallFontSize"
+                        x:TypeArguments="x:Double">
+                <On Platform="iOS" Value="11" />
+                <On Platform="Android, UWP, WinRT, WinPhone" Value="9" />
+            </OnPlatform>
+            <Style x:Key="FrameCardViewStyle" TargetType="Frame">
+                <Setter Property="CornerRadius" Value="5" />
+                <Setter Property="Margin" Value="5" />
+                <Setter Property="Padding" Value="5" />
+                <Setter Property="HorizontalOptions" Value="FillAndExpand" />
+                <Setter Property="OutlineColor" Value="LightGray" />
+                <Setter Property="BorderColor" Value="LightGray" />
+                <Setter Property="HasShadow" Value="True" />
+            </Style>
+
+            <Style x:Key="LabelStyle" TargetType="Label">
+                <Setter Property="FontSize" Value="Micro" />
+            </Style>
+
+            <Style x:Key="detailsStackLayout" TargetType="StackLayout">
+                <Setter Property="HorizontalOptions" Value="FillAndExpand" />
+                <Setter Property="VerticalOptions" Value="FillAndExpand" />
+                <Setter Property="Spacing" Value="2" />
+            </Style>
+
+            <Style x:Key="profileImageFrameStyle" TargetType="Frame">
+                <Setter Property="CornerRadius" Value="5" />
+                <Setter Property="Margin" Value="0" />
+                <Setter Property="Padding" Value="0" />
+                <Setter Property="IsClippedToBounds" Value="True" />
+            </Style>
+
+            <Style x:Key="profileImageStyle" TargetType="Image">
+                <!--<Setter Property="WidthRequest" Value="80" />
+                <Setter Property="HeightRequest" Value="80" />-->
+                <Setter Property="Aspect" Value="AspectFit" />
+            </Style>
+
+            <FontImageSource x:Key="YesFavorite" FontFamily="FontAwsomeSolid.otf#Font Awesome 5 Free" Glyph="&#xf005;" Color="LightGreen"/>
+            <FontImageSource x:Key="NotFavorite" FontFamily="FontAwsomeRegular.otf#Font Awesome 5 Free" Glyph="&#xf005;" Color="Black"/>
+        </ResourceDictionary>
+
+    </Application.Resources>
+</Application>
